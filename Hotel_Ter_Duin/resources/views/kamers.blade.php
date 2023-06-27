@@ -1,5 +1,5 @@
 <x-layout>
-<h1 class="d-flex justify-content-center mt-3">Selecteer uw verblijf</h1>
+<h1 class="d-flex justify-content-center mt-5">Selecteer uw verblijf</h1>
 <div class="container d-flex justify-content-center align-items-center mt-5">
     <form action="{{ route('booking.availableRooms') }}" method="GET">
         <label for="van">van</label>

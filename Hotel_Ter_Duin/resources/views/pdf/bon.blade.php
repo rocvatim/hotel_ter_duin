@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Reservation</title>
+    <title>Bon</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,6 +15,8 @@
         }
 
         table {
+            margin-top: 20%;
+            margin-bottom: 20%;
             width: 100%;
             border-collapse: collapse;
         }
@@ -40,9 +42,19 @@
     </style>
 </head>
 <body>
-    <h1>Reservation</h1>
-
-    <table>
+    <div class="Gegevens">
+        <div>
+            <h1>Hotel Ter Duin</h1>
+        </div>
+        <div>
+            <h3>Adres: Fraijlemaborg 141/ 1102CV</h3>
+            <h3>Telefoon: 020-12315155</h3>
+            <h3>Email: TerDuin@hotel.nl</h3>
+        </div>
+    </div>
+    
+    
+    <table class="reservering">
         <thead>
             <tr>
                 <th>Id</th>
@@ -70,7 +82,7 @@
                 </tr>
         </tbody>
     </table>
-    <p>Bedankt voor uw reservering bij Hotel Ter Duin</p>
-    <p>Kamer prijs {{ $reservation->kamer->prijs * $reservation->getNumberOfDays() }}</p>
+    <h4>Bedankt voor uw reservering bij Hotel Ter Duin!</h4>
+    <p><b>Totaal bedrag van uw reservering: €{{ $reservation->kamer->prijs * $reservation->getNumberOfDays() }}.00</b></p>
 </body>
 </html>

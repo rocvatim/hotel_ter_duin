@@ -10,13 +10,9 @@ class findRoomsController extends Controller
 {
     public function find(Request $request)
     {   
-        // dd($request->input('van'));
         $checkInDate = $request->input('van');
         $checkOutDate = $request->input('tot');
-        // $attributes = request()->validate([
-        //     'van' => 'required',
-        //     'tot' => 'required'
-        // ]);
+
         $availableRooms = Kamer::leftJoin('reservations', 'kamers.id', '=', 'reservations.kamer_id')
             ->whereNotBetween('reservations.van', [$checkInDate, $checkOutDate])
             ->whereNotBetween('reservations.tot', [$checkInDate, $checkOutDate])

@@ -1,6 +1,6 @@
 <x-layout>
     <hr>
-    <h4>Contact</h4>
+    <h4 style="text-align: center;">Contact</h4>
     <hr>
     <div class="row mx-auto my-auto">
         <div class="col-6">

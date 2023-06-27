@@ -47,11 +47,6 @@ Route::get('/reserveringen/pdf', [BookingController::class, 'generateReservation
 
 Route::get('/booking', [findRoomsController::class, 'find'])->name('booking.availableRooms');
 
-// Route::get('/completeReservation/{id}', function ($id) {
-//     return view('completeReservation',['reserveering' => Reservation::find($id)]);
-// });
-
-
 Route::get('/completeReservation/pdf/{id}', [BookingController::class, 'generateBonPDF'])->defaults('id', '$id');
 
 Route::post('/addReservation', [addReservationController::class, 'store']);

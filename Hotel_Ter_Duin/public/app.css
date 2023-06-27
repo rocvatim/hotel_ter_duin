@@ -121,3 +121,10 @@
   #reserveerKnop {
     transform: translate(0,-100%)
   }
+
+  .compleet {
+    border-radius: 2%;
+    width: 80%;
+    height: 50%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
